@@ -27,6 +27,6 @@ if "%CALLSIGN%"=="" (
     exit /b
 )
 
-py tx.py %CALLSIGN% "%~1"
+python3 tx.py --quality 75 --port 8100 --text %CALLSIGN% %CALLSIGN% "%~1"
 
 pause

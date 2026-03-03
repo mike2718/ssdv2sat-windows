@@ -76,7 +76,7 @@ def img2ssdv(packet_length,output_dir,input_filename,callsign,text,quality,max_s
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     # waiting until app finish 
     stdout, stderr = process.communicate()
-    return stdout.decode().strip()
+    return stdout.decode('gbk', errors='ignore').strip()
   except FileNotFoundError:
     print(f"\nError: img2ssdv.py not found. SSDV image not created..")
     return None

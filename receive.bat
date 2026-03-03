@@ -13,6 +13,6 @@ if errorlevel 1 (
 )
 
 echo Starting RX...
-py rx.py -s
+python3 rx.py --port 8100 -s
 
 pause
